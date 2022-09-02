@@ -1,0 +1,17 @@
+Installation requirements. 
+
+Installation of this module is simpel. Download the VirtualResection.py file, find the site-packages folder from Slicer and save the file in that folder.
+To quickly find the correct folder you can run: 
+
+import numpy
+numpy 
+
+This prints out an string of the numpy location, for example: <module 'numpy' from '/Applications/Slicer.app/Contents/lib/Python/lib/python3.9/site-packages/numpy/__init__.py'>
+This means that the correct installation folder would be '/Applications/Slicer.app/Contents/lib/Python/lib/python3.9/site-packages'
+
+
+To use this module, please import VirtualResection into the Slicer module. Functions can be accessed by using VirtualResection.FUCNTION(), 
+for example VirtualResection.Init().
+@myrthebuser
+Commit new file
+Commit summary
