@@ -53,7 +53,7 @@ def MergePoints():
     
     
 def CompleteResection():
-    #Completes a segmentation of the Kidney labelmap to extract both the RRP and the Resected Volume.
+    #Completes a segmentation of the Kidney labelmap to extract both the RRV and the Resected Volume.
         
     #Take the Kidney labelmap as volume to be segmented
     masterVolumeNode = slicer.util.getNode("Kidney labelmap for Virtual Resection")
@@ -64,8 +64,8 @@ def CompleteResection():
     segmentationNode.SetReferenceImageGeometryParameterFromVolumeNode(masterVolumeNode)
     
     
-    #Create RRP and Resected Volume node and set colours
-    addedSegmentID_RRP = segmentationNode.GetSegmentation().AddEmptySegment("RRP")
+    #Create RRV and Resected Volume node and set colours
+    addedSegmentID_RRV = segmentationNode.GetSegmentation().AddEmptySegment("RRV")
     segmentation = segmentationNode.GetSegmentation()
     segment=segmentation.GetSegment(segmentation.GetNthSegmentID(0))
     segment.SetColor(0.8666,0.5098,0.3961)
@@ -91,8 +91,8 @@ def CompleteResection():
     effect.self().onApply()
     segmentationNode.CreateClosedSurfaceRepresentation()
      
-    # Thresholding of RRP
-    segmentEditorNode.SetSelectedSegmentID(addedSegmentID_RRP)
+    # Thresholding of RRV
+    segmentEditorNode.SetSelectedSegmentID(addedSegmentID_RRV)
     segmentEditorWidget.setActiveEffectByName("Threshold")
     effect = segmentEditorWidget.activeEffect()
     effect.setParameter("MinimumThreshold","1")
