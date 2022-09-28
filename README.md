@@ -11,6 +11,8 @@ These DICOM files contain an abdominal CT.
 
 ![workflow virtual resection](https://user-images.githubusercontent.com/104366053/191739438-2487806c-974c-481c-a058-9ab05f621999.jpg)
 
+For any installation issues or questions please contact J.m.vanderzee-4@prinsesmaximacentrum.nl.
+
 # Dependencies
 
 Plugin
